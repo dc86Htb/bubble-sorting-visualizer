@@ -1,4 +1,4 @@
-CXX		  := g++
+ CXX		  := g++
 CXX_FLAGS := -Wall -Wextra -std=c++20 -ggdb
 
 BIN		:= bin

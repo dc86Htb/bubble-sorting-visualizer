@@ -5,7 +5,7 @@
 #include <ranges>
 using namespace std;
 void draw_state(vector<int>& v, SDL_Renderer* renderer, unsigned int red, unsigned int blue){
-    int index = 0;
+    int index = 0; 
     for(int i: v){
 	if(index == red){
 		SDL_SetRenderDrawColor(renderer, 255,0,0,255);
@@ -35,7 +35,7 @@ int main()
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
     SDL_CreateWindowAndRenderer(
-        100*10, 100*10, 0,
+        50*10, 100*10, 0,
         &window, &renderer);
     SDL_RenderSetScale(renderer, 10,10);
     for (unsigned int i = 0; i < v.size(); i++)
@@ -54,17 +54,6 @@ int main()
         }
         SDL_Delay(100);
     }
-    ;
-    for (size_t i : v)
-    {
-        cout << i << " ";
-    }
-    if (std::ranges::is_sorted(v))
-    {
-        cout << "\n sorted \n";
-    }
-    
-    
     
 }
 

@@ -17,7 +17,8 @@ void draw_state(vector<int>& v, SDL_Renderer* renderer, unsigned int red, unsign
 		SDL_SetRenderDrawColor(renderer,255,255,255,255);	
 
 	}
-        //SDL_SetRenderDrawColor(renderer,255,255,255,255);
+        //SD
+	SDL_SetRenderDrawColor(renderer,255,255,255,255);
         SDL_RenderDrawLine(renderer,index, 99, index, i);
         index += 1;
     }
@@ -28,14 +29,14 @@ int main()
     std::random_device rd;
     std::uniform_int_distribution d(1,99);
     vector<int> v;
-    for (int i = 0; i < 50; i++)
+    for (int i = 0; i < 20;i++)
     {
         v.push_back(d(rd));
     }
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
     SDL_CreateWindowAndRenderer(
-        50*10, 100*10, 0,
+        10*10, 50*10, 0,
         &window, &renderer);
     SDL_RenderSetScale(renderer, 10,10);
     for (unsigned int i = 0; i < v.size(); i++)
